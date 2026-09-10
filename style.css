@@ -1,0 +1,308 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  font-family: Arial, "Noto Sans JP", sans-serif;
+  color: white;
+}
+
+.page {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  background: white;
+  overflow: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-title {
+  position: absolute;
+  top: 45px;
+  right: 50px;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0,0,0,.7);
+}
+
+.hero-title h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-title p {
+  font-size: 17px;
+  margin-top: -5px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  background: #fff000;
+  min-height: 470px;
+  padding: 75px 38px;
+  display: flex;
+  gap: 55px;
+  align-items: center;
+  color: #111;
+}
+
+.about-image {
+  width: 51%;
+  flex-shrink: 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.small-image {
+  margin: 12px 0;
+}
+
+.small-image img {
+  width: 100%;
+  height: 65px;
+  object-fit: cover;
+}
+
+/* =========================
+   PAGODA
+========================= */
+
+.pagoda {
+  min-height: 350px;
+  background: #3f8156;
+  padding: 35px 45px;
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+.star {
+  width: 48%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  flex-shrink: 0;
+
+  /* star shape */
+  clip-path: polygon(
+    50% 2%,
+    61% 35%,
+    97% 35%,
+    68% 55%,
+    79% 91%,
+    50% 69%,
+    21% 91%,
+    32% 55%,
+    3% 35%,
+    39% 35%
+  );
+
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  background: #172f4b;
+  clip-path: polygon(
+    50% 2%,
+    61% 35%,
+    97% 35%,
+    68% 55%,
+    79% 91%,
+    50% 69%,
+    21% 91%,
+    32% 55%,
+    3% 35%,
+    39% 35%
+  );
+}
+
+.star-image {
+  position: absolute;
+  z-index: 2;
+  inset: 30px;
+  overflow: hidden;
+
+  clip-path: polygon(
+    50% 2%,
+    61% 35%,
+    97% 35%,
+    68% 55%,
+    79% 91%,
+    50% 69%,
+    21% 91%,
+    32% 55%,
+    3% 35%,
+    39% 35%
+  );
+}
+
+.star-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pagoda-text {
+  flex: 1;
+}
+
+.pagoda-text h2 {
+  font-size: 27px;
+  margin-bottom: 25px;
+}
+
+.pagoda-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   FUTURE
+========================= */
+
+.future {
+  background: #ff1b1b;
+  padding: 20px 140px 60px;
+  text-align: center;
+}
+
+.future h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.future p {
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.future img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  height: 55px;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  .hero {
+    height: 350px;
+  }
+
+  .hero-title {
+    top: 20px;
+    right: 20px;
+  }
+
+  .hero-title h1 {
+    font-size: 30px;
+  }
+
+  .hero-title p {
+    font-size: 11px;
+  }
+
+  .about {
+    padding: 35px 25px;
+    display: block;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-image img {
+    height: 220px;
+  }
+
+  .pagoda {
+    padding: 35px 25px;
+    display: block;
+  }
+
+  .star {
+    width: 80%;
+    margin: 0 auto 35px;
+  }
+
+  .pagoda-text h2 {
+    font-size: 23px;
+  }
+
+  .future {
+    padding: 25px 25px 45px;
+  }
+
+  .future img {
+    height: 220px;
+  }
+}
